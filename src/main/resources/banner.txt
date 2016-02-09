@@ -1,0 +1,5 @@
+ 
+*********************************
+*   MTT-ASSESSMENT Application   *
+**********************************
+:: Spring boot version :: ${spring-boot.version}

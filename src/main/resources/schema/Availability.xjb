@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+   xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema" jaxb:extensionBindingPrefixes="xjc">
+   
+   <!-- Use below jaxb:bindings for CXF -->
+   <jaxb:bindings schemaLocation="../schema/Availability.xsd"> 
+
+      <jaxb:schemaBindings>      
+         <jaxb:package name="com.mtt.assessment.message.jxb"/>
+      </jaxb:schemaBindings>
+      
+    <jaxb:globalBindings>
+        <xjc:superInterface name="com.mtt.assessment.message.Message"/>
+        <jaxb:javaType
+                    name="java.time.LocalDateTime"
+                    xmlType="xs:dateTime"
+                    parseMethod="com.mtt.assessment.adapter.jaxb.LocalDateTimeAdapter.unmarshal"
+                    printMethod="com.mtt.assessment.adapter.jaxb.LocalDateTimeAdapter.marshal" />
+    </jaxb:globalBindings>
+            
+   </jaxb:bindings>
+</jaxb:bindings>
